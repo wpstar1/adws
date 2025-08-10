@@ -8,7 +8,6 @@ import {
   Clock,
   Zap,
   BarChart3,
-  PieChart,
   Activity,
   Flame
 } from 'lucide-react';
@@ -66,7 +65,7 @@ interface Analytics {
   };
 }
 
-const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({ keyword, businessName, website }) => {
+const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({ keyword }) => {
   const [analytics, setAnalytics] = useState<Analytics | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<'overview' | 'competition' | 'audience' | 'forecast'>('overview');

@@ -7,9 +7,7 @@ import {
   Clock,
   Smartphone,
   Monitor,
-  Tablet,
-  Upload,
-  X
+  Tablet
 } from 'lucide-react';
 
 interface RealTimeAdPreviewProps {

@@ -37,13 +37,12 @@ interface AnalysisResult {
   industryInsights: string[];
 }
 
-const KeywordAnalysis: React.FC<KeywordAnalysisProps> = ({ keyword, website, onConsultationRequest }) => {
+const KeywordAnalysis: React.FC<KeywordAnalysisProps> = ({ keyword, onConsultationRequest }) => {
   const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   // 실제 환경에서는 API 호출로 대체
   const generateMockAnalysis = (keyword: string): AnalysisResult => {
-    const keywordType = keyword.toLowerCase();
     
     // 키워드 유형별 분석 데이터
     const analysisData: Record<string, Partial<AnalysisResult>> = {
